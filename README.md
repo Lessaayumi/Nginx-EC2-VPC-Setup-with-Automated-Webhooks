@@ -13,19 +13,38 @@ Este repositório contém a implementação de uma infraestrutura em nuvem basea
    - [Integração com DevSecOps](#Integração-com-DevSecOps)  
 
 3. [Passo a Passo](#passo-a-passo)  
-   3.1. [Criando uma VPC](#Criando-uma-VPC)  
-
-   3.2. [Instalar o Ubuntu](#instalar-o-ubuntu)  
-   3.3. [Instalar o servidor NGINX no Ubuntu](#instalar-o-servidor-nginx-no-ubuntu)  
-   3.4. [Criar script para verificação de status do NGINX](#criar-script-para-verificação-de-status-do-nginx)  
-   3.5. [Executar o script](#executar-o-script)  
-   3.6. [Automatizar a execução do script](#automatizar-a-execução-do-script)    
-      3.6.1. [Adicionar linha ao crontab](#adicionar-linha-ao-crontab)  
-      3.6.2. [Explicação da sintaxe](#explicação-da-sintaxe)  
-
-4. [Resultado](#resultado)  
+   3.1. [Criando uma VPC](#Criando-uma-VPC)
+   
+   3.2. [Criação de uma instância EC2, utilizando o sistema operacional Ubuntu](#Criação-de-uma-instânia-EC2,-utilizando-o-sistema-operacional-Ubuntu)
+   
+   3.3. [Conexão via SSH](#Conexão-via-SSH)
+   
+   3.4. [Instalação do Nginx](#Instalação=do-Nginx)
+   
+      3.4.1. [Teste de funcionamento do Nginx](#Teste-de-funcionamento-do-Nginx)
+   
+   3.5. [Criação do Webhook utilizando Discord](#Criação-do-Webhook-utilizando-Discord)
+   
+      3.5.1 [Criando um servidor no Discord](#Criando-um-servidor-no-Discord)
+   
+      3.5.2 [Criando um script de automação de logs: Utilizando Python](#Criando-um-script-de-automação-de-logs:-Utilizando-Python)
+   
+      3.5.3 [Automatizando Script utilizando o crontab](#Automatizando-Script-utilizando-o-crontab)
+   
+      3.5.4 [Teste de funcionalidade do WebHook](#Teste-de-funcionalidade-do-WebHook)
+   
+   3.6. [Criando uma Página em Html](#Criando-uma-Página-em-Html)    
+      
+5. [Testes finais](#Testes-finais)  
    4.1. [Logs quando o sistema está online](#logs-quando-o-sistema-está-online)  
-   4.2. [Logs quando o sistema está offline](#logs-quando-o-sistema-está-offline)  
+   4.2. [Logs quando o sistema está offline](#logs-quando-o-sistema-está-offline)
+
+7. [Considerações](#Considerações)
+
+8.  [Referências](#Referências)  
+  
+   
+   
 
 
 ## 1. Resumo:
