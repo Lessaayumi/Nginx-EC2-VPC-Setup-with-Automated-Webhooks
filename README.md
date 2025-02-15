@@ -42,7 +42,10 @@ Este repositório contém a implementação de uma infraestrutura em nuvem basea
 7. [Considerações](#Considerações)
 
 8.  [Referências](#Referências)  
-  
+
+  ![Image](https://github.com/user-attachments/assets/f9302819-925f-49ad-b365-fdd0a53c44a5)
+
+
    
    
 
