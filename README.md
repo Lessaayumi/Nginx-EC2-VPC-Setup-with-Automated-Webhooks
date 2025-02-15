@@ -44,6 +44,12 @@ Este repositório contém a implementação de uma infraestrutura em nuvem basea
 8.  [Referências](#Referências)  
 
   ![Image](https://github.com/user-attachments/assets/f9302819-925f-49ad-b365-fdd0a53c44a5)
+   ![Image](https://github.com/user-attachments/assets/1ad85820-c05c-4810-a736-a11bb6258527)
+    ![Image](https://github.com/user-attachments/assets/6f75fa6b-ae50-47df-90c7-533edf5030d9)
+
+
+
+  
 
 
    
