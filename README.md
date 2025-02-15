@@ -102,7 +102,7 @@ bash
 sudo chmod 722 /var/log/nginx
 
 
-![Captura de tela 2024-12-18 160007](https://github.com/user-attachments/assets/a7554b2c-2684-4606-ab9e-048e7e5e3d6c)
+![Captura de tela 2024-12-18 160007](![Image](https://github.com/user-attachments/assets/dd4300a1-c127-434c-bc75-e110914a3e64))
 
 - Criar os arquivos de log com os seguintes comandos:
   
