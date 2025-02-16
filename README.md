@@ -581,63 +581,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 
 
-powershell
-sudo systemctl status nginx
 
-
-![Captura de tela 2024-12-18 143816](https://github.com/user-attachments/assets/1de157ca-347f-482b-8f30-2da8349a845d)
-
-
-- Abra seu navegador e digite http://localhost. Se o Nginx estiver funcionando, você verá a seguinte página:
-  
-  
-![Captura de tela 2024-12-18 144651](https://github.com/user-attachments/assets/ac160411-fce7-4d5c-acde-a6e84f760cb4)
-
-
-- Configurar as permissões de escrita na pasta /var/log/nginx para criar logs personalizados:
-
-bash
-sudo chmod 722 /var/log/nginx
-
-
-![Captura de tela 2024-12-18 160007](![Image](https://github.com/user-attachments/assets/dd4300a1-c127-434c-bc75-e110914a3e64))
-
-- Criar os arquivos de log com os seguintes comandos:
-  
-bash
-sudo touch /var/log/nginx/servico_online.log
-sudo touch /var/log/nginx/servico_offline.log
-`
-
-![Captura de tela 2024-12-1…
-[15:14, 11/02/2025] Alessandra Lopes: #!/bin/bash
-
-#Var em que guarda o caminho para o diretorioem que o log sera salvo
-LOG_DIR="/var/log/nginx"
-
-#Var para os arquivos de log online e offline
-LOG_ONLINE="$LOG_DIR/servico_online.log"
-LOG_OFFLINE="$LOG_DIR/servico_offline.log"
-
-#Para data e hora local
-DATA_HORA=$(date '+%Y-%m-%d %H:%M:%S')
-
-#Nome do servico
-SERVICO="nginx"
-
-#Var em que o status do atual do nginx é armazenado
-STATUS=$(systemctl is-active $SERVICO)
-
-#Condcional para verificar o status do serviço
-if [ "$STATUS" == "active" ]; then
-        ESTADO="ONLINE"
-        MENSAGEM="O servico $SERVICO está ONLINE."
-        LOG="$DATA_HORA | Serviço: $SERVICO | STATUS: $ESTADO | Mensagem: $MENSAGEM"
-        #Escreve log no arquivo servico_online.log
-        echo "$LOG" >> "$LOG_ONLINE"
-        echo -e "\033[0;32m Online \033[0m"
-else
-        ESTADO="OFLLINE"
         MENSAGEM="O serviço $SERVICO está OFFLINE"
         LOG="$DATA_HORA | Serviço: $SERVICO | STATUS: $ESTADO | Mensagem: $MENSAGEM"
         #Escreve log no arquivo servico_offline.log
