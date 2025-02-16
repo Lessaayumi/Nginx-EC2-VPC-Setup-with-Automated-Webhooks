@@ -61,14 +61,47 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 ## 3. Passo a Passo
 
 ## 3.1. Criando uma VPC:
-- Abra o power shell como administrador e execute o seguinte comando:
-powershell
-wsl --install
+- Para criar uma VPC na AWS, é necessário acessar a página inicial do console da AWS e localizar a opção **VPC** no menu de navegação.
+  
+  ![Image](https://github.com/user-attachments/assets/dd4300a1-c127-434c-bc75-e110914a3e64)
+  
+- Para criar uma VPC na AWS, é necessário acessar a página inicial do console da AWS e localizar a opção **VPC** no menu de navegação.
+  
+  ![Image](https://github.com/user-attachments/assets/3158d1a8-46c0-4cf6-84ce-3af678ae4b12)
+  
+- Após essa etapa, o sistema redirecionará para a página de criação da VPC. Como nosso objetivo é configurar uma VPC com duas sub-redes públicas e duas privadas, selecionaremos a opção **Criar VPC e mais** para prosseguir com a configuração.
+  
+  ![Image](https://github.com/user-attachments/assets/7d91290a-501f-4987-b5b1-2f2b95f3f47b)
 
-- Reinicie o sistema após a instalação, se solicitado.
+- O próximo passo consiste na definição de um nome para a sua VPC.
+  
+  ![Image](https://github.com/user-attachments/assets/e8ae51a7-bd25-4c15-b9ef-d8ac28dbdb56)
 
-## 3.2. Instalar o Ubuntu:
-- Após a instalação do WSL, abra o Microsoft Store e instale o Unbutu 20.04 ou superior.
+- Agora, é necessário definir o endereço IP e o tipo de bloco a ser utilizado. Neste caso, adotaremos a configuração padrão, considerando a finalidade do projeto.
+
+  ![Image](https://github.com/user-attachments/assets/84f9fbb1-155c-415a-8661-57c5c952d75b)
+
+- O próximo passo consiste na criação das sub-redes. Como o projeto exige duas sub-redes públicas e duas privadas, seguiremos as configurações detalhadas a seguir.
+
+   ![Image](https://github.com/user-attachments/assets/3d55fd64-d430-4098-9879-cb5193d5e712)
+  
+   ![Image](https://github.com/user-attachments/assets/21631163-6b92-47c8-946f-96654d7057ed)
+
+- Após a realização das configurações, a arquitetura da VPC será estruturada da seguinte forma.
+
+   ![Image](https://github.com/user-attachments/assets/642fa485-d415-47cd-a1bd-3a16bdcd32f6)
+
+- Após a verificação, para concluir a criação da VPC, basta selecionar o botão **"Criar VPC"**.
+
+  ![Image](https://github.com/user-attachments/assets/69acf7eb-d002-4b0c-9f76-6da722ca0348)
+
+- Após essa etapa, nossa VPC estará criada, concluindo assim o processo de sua configuração.
+
+   ![Image](https://github.com/user-attachments/assets/e40aec9a-bb55-40c3-8514-dba876888563)
+
+## 3.2. Criação de uma instância EC2, utilizando o sistema operacional Ubuntu:
+
+-  
 
 ## 3.3. Instalar o servidor Nginx no Ubuntu:
 - No terminal Ubuntu, digite:
