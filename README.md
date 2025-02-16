@@ -225,7 +225,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
   ![Image](https://github.com/user-attachments/assets/34af50c5-230d-49b8-827f-41ebb4722a71)
 
-
+- Com isso, podemos ver que nosso servidor está respondendo ao Nginx e executando corretamente os comandos que enviamos.
 
 
   
