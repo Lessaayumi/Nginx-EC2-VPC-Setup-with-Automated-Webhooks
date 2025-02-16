@@ -10,7 +10,6 @@ Este repositório contém a implementação de uma infraestrutura em nuvem basea
    - [Configuração de Servidor Web](#Confifguração-de-Servidor-Web)  
    - [Automação e Segurança](#Automação-e-Segurança)  
    - [Monitoramento Contínuo](#Monitoramento-Contínuo)  
-   - [Integração com DevSecOps](#Integração-com-DevSecOps)  
 
 3. [Passo a Passo](#passo-a-passo)  
    3.1. [Criando uma VPC](#Criando-uma-VPC)
