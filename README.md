@@ -151,8 +151,53 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
    ![Image](https://github.com/user-attachments/assets/709af886-7c5a-42a7-9797-0e85e8ab5698)
 
 - Neste processo da 3.1. e 3.2., criamos uma VPC na AWS, configurando sub-redes públicas e privadas conforme as necessidades do projeto. Em seguida, acessamos o painel EC2, onde configuramos e lançamos uma instância, definindo seu nome, sistema operacional (Ubuntu), grupo de segurança e armazenamento. Também habilitamos os serviços SSH e HTTP para garantir a conectividade e o acesso adequado. Por fim, executamos a instância e verificamos sua criação com sucesso. Esse procedimento garante uma infraestrutura básica e segura para hospedar aplicações e serviços na AWS.
+
+## 3.3. Conexão via SSH:
+
+- Agora procederemos com a conexão via SSH. Para tanto, devemos selecionar nossa instância e clicar no botão "Conectar".
+
+  ![Image](https://github.com/user-attachments/assets/e423e427-a54c-4de3-8163-a7adf148da9d)
+
+- Na página para a qual seremos direcionados, deveremos selecionar o serviço "Cliente SSH".
+
+  ![Image](https://github.com/user-attachments/assets/c13a28c2-a2f2-467b-8901-439f52870095)
+
+- Em seguida, devemos abrir o prompt de comando (CMD) em nossa máquina local.
+
+ ![Image](https://github.com/user-attachments/assets/d0e32f50-3cb0-4c0b-9202-09297fb1899f)
+
+- No prompt de comando (CMD), devemos navegar até o local onde se encontra a nossa chave de acesso via SSH.
+
+ ![Image](https://github.com/user-attachments/assets/f8b794e9-ad6f-4de9-beb9-2a1e6c031735)
+
+- Após acessar o diretório onde o arquivo de chave está disponível, devemos executar o comando fornecido pela própria AWS para obter o acesso via SSH.
+
+   ![Image](https://github.com/user-attachments/assets/4c9f3ca1-34d1-4f9d-a251-85ec760e57ea)
+
+   ![Image](https://github.com/user-attachments/assets/ba95759d-3b60-4bc1-bac3-91fc2c727cd8)
+
+- Após executar esse comando, nossa máquina estabelecerá uma conexão via SSH com a instância Ubuntu hospedada na AWS.
+
+    ![Image](https://github.com/user-attachments/assets/cad28718-8ee7-488e-acbf-0b3156f4245f)
+
+  
+
+
+  
+
  
-## 3.3. Instalar o servidor Nginx no Ubuntu:
+
+
+
+  
+
+
+  
+
+
+  
+ 
+## 3.56. Instalar o servidor Nginx no Ubuntu:
 - No terminal Ubuntu, digite:
 powershell
 sudo apt install nginx
