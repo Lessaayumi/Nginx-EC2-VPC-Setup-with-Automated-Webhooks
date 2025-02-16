@@ -227,10 +227,45 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
   ## 3.5. Criação do Webhook utilizando Discord
 
-  - Neste estágio do projeto, será necessário criar um servidor webhook no Discord. Este servidor deverá ser notificado a cada minuto, caso o site Nginx esteja fora do ar. O primeiro passo para isso é acessar o Discord.
+  - Neste estágio do projeto, será necessário criar um servidor webhook no Discord. Este servidor deverá ser notificado a cada minuto, caso o site Nginx esteja fora do ar. O primeiro passo para isso é acessar o Discord e, em seguida, deve-se selecionar a opção de criação, conforme ilustrado na imagem abaixo.
  
      ![Image](https://github.com/user-attachments/assets/95f72cee-d295-43de-9a2f-4d92e3746105)
 
+  - Após isso, selecione a opção "Criar o meu", e em seguida a opção "Para meus amigos e eu"
+ 
+     ![Image](https://github.com/user-attachments/assets/c8b8ef55-b29c-43ce-980f-988051ca48fd)
+
+     ![Image](https://github.com/user-attachments/assets/5c146815-b103-4e7d-a187-740e4f0afb1b)
+
+   - Logo em seguida, deve-se escolher o nome do serviço e clicar na opção "Criar".
+ 
+     ![Image](https://github.com/user-attachments/assets/46808eb8-4172-4132-918d-137bd2affb77)
+
+   - Com isso, o servidor que iremos utilizar para monitorar o serviço Nginx foi criado. No entanto, é necessário habilitar nele a opção "Webhook", que nada mais é do que um mecanismo de comunicação entre sistemas, permitindo que o servidor envie automaticamente informações para outro sistema (no caso, o Discord) sempre que determinado evento ocorrer. Para isso, devemos acessar as configurações, conforme mostrado na imagem abaixo.
+ 
+   ![Image](https://github.com/user-attachments/assets/044bff05-8a47-4b31-9a57-7c806f67d437)
+
+- Após isso, devemos selecionar a opção "Interações" e criar um serviço Webhook.
+
+  ![Image](https://github.com/user-attachments/assets/75a6c652-32e2-44b6-8376-1e4b980ea2bc)
+
+  ![Image](https://github.com/user-attachments/assets/75356d6b-503c-4aff-b4de-5358d707bab3)
+
+   ![Image](https://github.com/user-attachments/assets/12d8d7f1-0a6d-44f1-8226-0e8523849697)
+
+- Com isso, o serviço Webhook foi criado. Agora, devemos selecionar o serviço que foi gerado, copiar a URL e armazená-la, para que possamos iniciar a automatização desse serviço.
+
+   ![Image](https://github.com/user-attachments/assets/8feb6400-0224-46ac-b441-d9629f0ca560)
+
+  ![Image](https://github.com/user-attachments/assets/976ff049-2cbc-41cf-b4cd-d7517518a018)
+
+- A URL do servidor Webhook deve ser armazenada, pois, ao criarmos o script para automatizar o processo, precisaremos dela. As informações desse passo a passo foram retiradas do artigo [Usando Webhooks](https://support.discord.com/hc/pt-br/articles/228383668-Usando-Webhooks) do Discord. Consulte-o em caso de dúvidas.
+
+  ## 3.6. Criando um script de automação de logs utilizando Python
+
+  - 
+
+  
   
 
 
