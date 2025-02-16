@@ -313,6 +313,31 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 ## 3.8. Teste de funcionalidade do WebHook
 
+- Agora, realizaremos os primeiros testes para verificar o funcionamento do serviço. O primeiro passo é verificar se o serviço Nginx está ativo, utilizando o seguinte comando:
+
+      sudo systemctl status nginx
+
+![Image](https://github.com/user-attachments/assets/69cc1019-ead6-4f80-8447-e32aec9cd5ca)
+
+- O comando indicou que o Nginx estava ativo. Para pausá-lo, devemos utilizar o seguinte comando:
+
+      sudo systemctl stop nginx
+
+- Logo após um minuto que desativamos o serviço Nginx começamos a receber as mensagens de alerta no Discord.
+
+![Image](https://github.com/user-attachments/assets/1de34b38-f369-4683-b8d5-1822a4c75390)
+
+- Este teste demonstrou que o serviço Nginx está em funcionamento e que o webhook está operando corretamente, enviando notificações conforme esperado.
+
+## 3.9. Criando uma Página em Html
+
+- O projeto propõe a hospedagem de uma página web desenvolvida em HTML no serviço Nginx. Para isso, uma página foi criada e hospedada com sucesso no servidor Nginx.
+
+  
+  
+  
+
+
 
 
    
