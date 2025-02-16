@@ -463,6 +463,40 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 ## 3.10. Subindo script Html
 
+- Agora, vamos subir o programa em HTML que foi desenvolvido e configurar o Nginx para executá-lo. Primeiro vamos criar o conteúdo em HTML utilizando o comando nano
+
+      nano /etc/nginx/sites-available/meusite
+
+  - Nesse arquivo vamos por as infromações contidas na imagem abaixo:
+ 
+  ![Image](https://github.com/user-attachments/assets/8c9c858b-dfe9-4aef-8cd5-679fdb9d8fe8)
+
+  - Logo, iremos criar uma pasta para armazenar
+ 
+    ![Image](https://github.com/user-attachments/assets/dcafaed3-ac09-496c-827d-c659c79fe5aa)
+
+  - Em seguida iremos criar um arquivo dentro dessa pasta para armazenar o script do nosso site
+ 
+        nano /var/www/meusite/index.html
+
+  - Nessa arquivo foi armazenado o conteudo que será transmitido
+ 
+    ![Image](https://github.com/user-attachments/assets/49910362-de40-4ef6-9921-45cc6de1c6fe)
+
+- Após fazer o scrip, os seguintes comandos devem ser realizados.
+
+  ![Image](https://github.com/user-attachments/assets/08e5df6d-21f2-45fb-a501-8f2c6aba216e)
+
+  ![Image](https://github.com/user-attachments/assets/a8373112-c8e7-45ec-b2c1-cd75a3c481dd)
+
+   ![Image](https://github.com/user-attachments/assets/26c182e6-79d0-4059-a951-e98df6cbd08d)
+
+  ![Image](https://github.com/user-attachments/assets/e37b44b3-7940-497b-b0e2-15509157add4)
+
+- Esses comandos são as configurações necessárias para que o script seja executado dentro do Nginx e seja transmitido online via HTTP para outros computadores.
+ 
+    
+
 
 
 
