@@ -267,7 +267,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
   - Caso o software não esteja atualizado, é necessário executar o seguinte comando para atualizar o Python:
  
-    sudo apt-get install python3
+        sudo apt-get install python3
 
 
     
