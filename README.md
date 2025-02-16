@@ -483,7 +483,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
  
     ![Image](https://github.com/user-attachments/assets/49910362-de40-4ef6-9921-45cc6de1c6fe)
 
-- Após fazer o scrip, os seguintes comandos devem ser realizados.
+- Após fazer o script, os seguintes comandos devem ser realizados.
 
   ![Image](https://github.com/user-attachments/assets/08e5df6d-21f2-45fb-a501-8f2c6aba216e)
 
@@ -493,9 +493,57 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
   ![Image](https://github.com/user-attachments/assets/e37b44b3-7940-497b-b0e2-15509157add4)
 
-- Esses comandos são as configurações necessárias para que o script seja executado dentro do Nginx e seja transmitido online via HTTP para outros computadores.
+- Esses comandos são as configurações necessárias para que o script seja executado dentro do Nginx e seja transmitido online via HTTP para outros computadores. E após isso temos um site, em html rodando dentro do serviço Nginx
+
+  ![Image](https://github.com/user-attachments/assets/ac791717-9aff-42f5-800c-77752c4c5886)
+
+## 4. Testes finais:
+
+- Agora, nesta seção, realizaremos dois testes: o primeiro para verificar o funcionamento do site e o segundo para testar o recebimento de mensagens no Discord quando o serviço do Nginx não estiver respondendo.
+
+  ## 4.1.  Logs quando o sistema está online
+
+  - Reiniciamos o sistema e o Nginx começa a funcionar automaticamente assim que a instância é iniciada.
+
+-Inicia o Nginx:
+      
+        systemctl start nginx
+
+ - Verifica o estado do Nginx:
+
+       systemctl status nginx
+
+- A imagem abaixo ilustra o serviço Nginx em funcionamento, com o site sendo executado juntamente com o script.
+
+  ![Image](https://github.com/user-attachments/assets/7ca1b4c5-31af-451e-b4c5-1d67ebfee51f)
+
+   ## 4.2. Logs quando o sistema está offline
+
+  - Agora, vamos pausar o serviço e verificar o recebimento das mensagens no Discord.
  
-    
+  - Para o Nginx:
+ 
+        systemctl stop nginx
+
+   - A imagem abaixo comprova que o site não está no ar, o Nginx está parado e o Discord está recebendo os alertas de que o sistema não está funcionando.
+ 
+  ![Image](https://github.com/user-attachments/assets/ae2675be-aa3e-4726-b06b-9b95d69c1f7b)
+
+- Concluímos que o projeto desenvolvido atende a todos os requisitos propostos, incluindo a criação da VPC, a configuração da instância EC2, a hospedagem do site Nginx e a implementação da verificação via Discord em caso de indisponibilidade do serviço, garantindo a automação do monitoramento e a notificação em tempo real.
+
+## 5. Considerações
+
+- Este projeto é de grande importância, pois oferece uma solução completa para monitoramento e automação de serviços críticos, como o Nginx, em ambientes de produção. A criação da infraestrutura necessária na AWS, incluindo a VPC e a instância EC2, além da configuração do servidor Nginx, permite a hospedagem de aplicações de forma escalável e segura. A implementação de alertas via Discord em caso de falha do serviço garante uma resposta rápida e eficaz a problemas, minimizando o tempo de inatividade e contribuindo para a continuidade dos serviços. Esse tipo de automação é essencial em ambientes de produção, onde a disponibilidade e o monitoramento constante são cruciais para a operação estável e segura das aplicações.
+
+## 6. Referências
+
+- Amazon CloudWatch: O Amazon CloudWatch é um serviço de monitoramento que permite coletar e acompanhar métricas, logs e eventos, oferecendo insights sobre o desempenho e a integridade dos recursos e aplicações na AWS.
+
+- Ferramentas de Monitoramento da AWS: A AWS oferece diversas ferramentas para monitoramento e governança, permitindo a observação e o gerenciamento eficaz de recursos e aplicações na nuvem.
+
+- https://support.discord.com/hc/pt-br/articles/228383668-Usando-Webhooks
+
+
 
 
 
