@@ -419,9 +419,9 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
       </div>
 
       <script>
-    let dropdownVisible = false;
+       let dropdownVisible = false;
     
-    function toggleDropdownProject1() {
+       function toggleDropdownProject1() {
       const dropdown = document.getElementById('projectDropdown');
       if (!dropdownVisible) {
         dropdown.style.display = 'block';
@@ -437,9 +437,9 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
         }, 300);
       }
       dropdownVisible = !dropdownVisible;
-    }
+       }
 
-    function toggleDropdownPb() {
+      function toggleDropdownPb() {
       const dropdown = document.getElementById('pbDropdown');
       if (!dropdownVisible) {
         dropdown.style.display = 'block';
@@ -455,13 +455,15 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
         }, 300);
       }
       dropdownVisible = !dropdownVisible;
-    }
-    </script>
-    </body>
-    </html>
+      }
+       </script>
+      </body>
+       </html>
 
 
 ## 3.10. Subindo script Html
+
+
 
 
   
