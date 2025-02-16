@@ -41,20 +41,7 @@ Este repositório contém a implementação de uma infraestrutura em nuvem basea
 
 7. [Considerações](#Considerações)
 
-8.  [Referências](#Referências)  
-
-  ![Image](https://github.com/user-attachments/assets/f9302819-925f-49ad-b365-fdd0a53c44a5)
-   ![Image](https://github.com/user-attachments/assets/1ad85820-c05c-4810-a736-a11bb6258527)
-    ![Image](https://github.com/user-attachments/assets/6f75fa6b-ae50-47df-90c7-533edf5030d9)
-
-
-
-  
-
-
-   
-   
-
+8.  [Referências](#Referências)
 
 ## 1. Resumo:
 A atividade foi desenvolvida com base no Programa de Bolsas (PB) da Compass UOL, dentro da trilha de estudos em AWS e DevSecOps. O objetivo principal é capacitar os participantes na criação e configuração de uma infraestrutura na nuvem, seguindo boas práticas de segurança e automação.  
@@ -66,13 +53,11 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 ## 2. Objetivos:
 - _Capacitação em Computação em Nuvem_: Proporcionar experiência prática na criação e configuração de uma infraestrutura na AWS, utilizando serviços essenciais como VPC e EC2.
 
-- _Configuração de Servidor Web_: Instalar e configurar o servidor Nginx em uma instância Ubuntu, permitindo a hospedagem de uma página web simples em HTML.
+- _Configuração de Servidor Web_: Instalar e configurar o servidor Nginx, permitindo a hospedagem de uma página web simples em HTML.
 
 - _Automação e Segurança_: Implementar boas práticas de acesso remoto via SSH, garantindo a correta configuração e segurança da instância.
     
 - _Monitoramento Contínuo_: Desenvolver um script em Python para verificar a disponibilidade do site e integrar com o Discord Webhook para alertas automáticos em caso de falhas
-
-- _Integração com DevSecOps_: Aplicar conceitos de automação e monitoramento para assegurar a disponibilidade e confiabilidade da aplicação, alinhando-se a práticas de DevSecOps.
 
 ## 3. Passo a Passo
 
