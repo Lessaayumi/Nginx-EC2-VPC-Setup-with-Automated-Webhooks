@@ -261,7 +261,16 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
   ## 3.6. Criando um script de automação de logs utilizando Python
 
-  - 
+  - O objetivo do projeto é criar um serviço de automação que envie uma mensagem de erro no Discord caso o Nginx esteja fora do ar. Para isso, inicialmente, é necessário verificar a versão do software Python instalada.
+ 
+    ![Image](https://github.com/user-attachments/assets/c0ccf0f2-20a8-408e-a78d-2011243046d1)
+
+  - Caso o software não esteja atualizado, é necessário executar o seguinte comando para atualizar o Python:
+ 
+    sudo apt-get install python3
+
+
+    
 
   
   
