@@ -225,6 +225,14 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 - Com isso, podemos ver que nosso servidor está respondendo ao Nginx e executando corretamente os comandos que enviamos.
 
+  ## 3.5. Criação do Webhook utilizando Discord
+
+  - Neste estágio do projeto, será necessário criar um servidor webhook no Discord. Este servidor deverá ser notificado a cada minuto, caso o site Nginx esteja fora do ar. O primeiro passo para isso é acessar o Discord.
+ 
+     ![Image](https://github.com/user-attachments/assets/95f72cee-d295-43de-9a2f-4d92e3746105)
+
+  
+
 
   
 
