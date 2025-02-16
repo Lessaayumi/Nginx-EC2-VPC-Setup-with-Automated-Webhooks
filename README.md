@@ -333,7 +333,137 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 - O projeto propõe a hospedagem de uma página web desenvolvida em HTML no serviço Nginx. Para isso, uma página foi criada e hospedada com sucesso no servidor Nginx.
 
-  
+![Image](https://github.com/user-attachments/assets/ac791717-9aff-42f5-800c-77752c4c5886)
+
+- Para a criação dessa página, além de HTML, foram utilizados CSS e um pouco de JavaScript. Abaixo, deixo o código para consulta.
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Atividades PB</title>
+      </head>
+      <body style="font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: url('background.jpg') no-repeat center center fixed; background-size: cover; color: #f4f4f4;">
+      <div style="max-width: 900px; margin: 40px auto; padding: 20px; background: rgba(0, 0, 0, 0.8); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+      <h1 style="text-align: center; color: #cda76e;">Atividades PB</h1>
+      <p style="font-size: 16px; line-height: 1.6;">
+      Bem vindo, nessa pagina trago um resumo sobre meu ultimo projeto.
+      </p>
+    
+      <button onclick="toggleDropdownProject1()" style="display: block; width: 100%; background: #7693b0; color: #fff; padding: 15px; font-size: 18px; border: none; border-radius: 5px; text-align: left; cursor: pointer; margin-top: 20px; transition: background 0.3s ease;">
+      Projeto 1 - Configuração de Servidor Web com Monitoramento
+      </button>
+      <ul id="projectDropdown" style="display: none; list-style: none; margin: 10px 0 0; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 5px; opacity: 0; transform: translateY(-10px); transition: all 0.3s ease;">
+        <h3 style="color: #cda76e;">Etapa 1: Configuração do Ambiente Tarefas</h3>
+        <ol style="margin-left: 20px;">
+          <li>Criar uma VPC na AWS com:</li>
+          <ul style="margin-left: 20px; list-style-type: circle;">
+            <li>2 sub-redes públicas (para acesso externo)</li>
+            <li>2 sub-redes privadas (para futuras expansões)</li>
+            <li>Uma Internet Gateway conectada às sub-redes públicas</li>
+          </ul>
+          <li>Criar uma instância EC2 na AWS</li>
+          <ul style="margin-left: 20px; list-style-type: circle;">
+            <li>Escolher uma AMI baseada em Linux (Ubuntu/Debian/Amazon Linux)</li>
+            <li>Instalar na sub-rede pública criada anteriormente</li>
+            <li>Associar um Security Group que permita tráfego HTTP (porta 80) e SSH (porta 22, opcional)</li>
+          </ul>
+          <li>Acessar a instância via SSH para realizar configurações futuras</li>
+        </ol>
+        
+        <h3 style="color: #cda76e; margin-top: 20px;">Etapa 2: Configuração do Servidor Web</h3>
+        <ol style="margin-left: 20px;">
+          <li>Instalar o servidor Nginx na EC2</li>
+          <li>Criar uma página HTML simples para ser exibida pelo servidor.</li>
+          <li>Configurar o Nginx para servir a página corretamente</li>
+        </ol>
+      
+        <h3 style="color: #cda76e; margin-top: 20px;">Etapa 3: Monitoramento e notificações</h3>
+        <ol style="margin-left: 20px;">
+          <li>Criar um script em Bash ou Python para monitorar a disponibilidade do site</li>
+          <li>O script deve:</li>
+          <ol style="margin-left: 20px; list-style-type: circle;">
+            <li>Verificar se o site responde corretamente a uma requisição HTTP</li>
+            <li>Criar logs das verificações em /var/log/monitoramento.log</li>
+            <li>Enviar uma notificação via Discord, Telegram ou Slack se detectar indisponibilidade</li>
+          </ol>
+          <li>Configurar o script para rodar automaticamente a cada 1 minuto usando cron ou systemd timers</li>
+        </ol>
+
+        <h3 style="color: #cda76e; margin-top: 20px;">Etapa 4: Automação e Testes</h3>
+        <ol style="margin-left: 20px;">
+          <li>Testar a implementação:</li>
+          <ol style="margin-left: 20px; list-style-type: circle;">
+            <li>Verificar se o site está acessível via navegador</li>
+            <li>Parar o Nginx e verificar se o script detecta e envia alertas corretamente</li>
+          </ol>
+          <li>Criar uma documentação no GitHub explicando (este projeto se encontra em <a href="https://github.com/Lessaayumi" style="color: #cda76e;">https://github.com/Lessaayumi</a>):</li>
+          <ol style="margin-left: 20px; list-style-type: circle;">
+            <li>Como configurar o ambiente</li>
+            <li>Como instalar e configurar o servidor web</li>
+            <li>Como funciona o script de monitoramento</li>
+            <li>Como testar e validar a solução</li>
+        </ol>
+      </ul>
+
+      <button onclick="toggleDropdownPb()" style="display: block; width: 100%; background: #7693b0; color: #fff; padding: 15px; font-size: 18px; border: none; border-radius: 5px; text-align: left; cursor: pointer; margin-top: 20px; transition: background 0.3s ease;">
+        Programa de Bolsas
+      </button>
+      <ul id="pbDropdown" style="display: none; list-style: none; margin: 10px 0 0; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 5px; opacity: 0; transform: translateY(-10px); transition: all 0.3s ease;">
+        <li>Aqui vamos falar um pouco sobre PB!</li>
+      </ul>
+
+      <h2 style="color: #7693b0; margin-top: 30px;">Contato</h2>
+      <p>Caso queira entrar em contato, sinta-se a vontade em enviar um e-mail para <a href="mailto:alessandra.lopes.pb@compasso.com.br" style="color: #cda76e;">alessandra.lopes.pb@compasso.com.br</a>.</p>
+      </div>
+
+      <script>
+    let dropdownVisible = false;
+    
+    function toggleDropdownProject1() {
+      const dropdown = document.getElementById('projectDropdown');
+      if (!dropdownVisible) {
+        dropdown.style.display = 'block';
+        setTimeout(() => {
+          dropdown.style.opacity = '1';
+          dropdown.style.transform = 'translateY(0)';
+        }, 10);
+      } else {
+        dropdown.style.opacity = '0';
+        dropdown.style.transform = 'translateY(-10px)';
+        setTimeout(() => {
+          dropdown.style.display = 'none';
+        }, 300);
+      }
+      dropdownVisible = !dropdownVisible;
+    }
+
+    function toggleDropdownPb() {
+      const dropdown = document.getElementById('pbDropdown');
+      if (!dropdownVisible) {
+        dropdown.style.display = 'block';
+        setTimeout(() => {
+          dropdown.style.opacity = '1';
+          dropdown.style.transform = 'translateY(0)';
+        }, 10);
+      } else {
+        dropdown.style.opacity = '0';
+        dropdown.style.transform = 'translateY(-10px)';
+        setTimeout(() => {
+          dropdown.style.display = 'none';
+        }, 300);
+      }
+      dropdownVisible = !dropdownVisible;
+    }
+    </script>
+    </body>
+    </html>
+
+
+## 3.10. Subindo script Html
+
+
   
   
 
