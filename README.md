@@ -101,8 +101,57 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 ## 3.2. Criação de uma instância EC2, utilizando o sistema operacional Ubuntu:
 
--  
+-  Na página inicial da AWS, é necessário localizar a opção **EC2**. Caso não esteja visível no menu principal, podemos utilizar a barra de pesquisa **"Search"** para digitar **EC2**, facilitando sua localização.
 
+  ![Image](https://github.com/user-attachments/assets/78973ca7-a8c2-460a-a23d-2045640a8ae3)
+
+- Ao selecionar a opção **EC2**, seremos direcionados ao painel correspondente. Nesse painel, deve-se localizar a opção **Executar instância**, para iniciar o processo de criação da instância.
+
+   ![Image](https://github.com/user-attachments/assets/c250ecfc-2255-403e-aab5-13d98a5e93a4)
+
+- Agora, estamos no painel de criação da instância EC2. Nesse momento, será necessário adicionar um nome e as tags fornecidas pela sua empresa para a criação da instância.
+
+  ![Image](https://github.com/user-attachments/assets/92203e9b-5af5-4155-a10a-98b3a7354b13)
+
+- Em seguida, selecionaremos o servidor **Ubuntu**, que foi o escolhido para a criação da instância.
+
+  ![Image](https://github.com/user-attachments/assets/cae85007-8e06-46b1-aad8-8a24c0bbe6bc)
+
+- Confira nas imagens as configurações necessárias para o correto funcionamento do sistema, a fim de evitar problemas futuros com os serviços.
+
+ ![Image](https://github.com/user-attachments/assets/cae85007-8e06-46b1-aad8-8a24c0bbe6bc)
+  
+ ![Image](https://github.com/user-attachments/assets/e1917323-2991-4146-a771-ae4efabed38a)
+
+- Agora, será necessário selecionar o par de chaves para realizar a conexão via SSH.
+
+![Image](https://github.com/user-attachments/assets/a098884b-ee8c-4b94-87c2-e19548064900)
+ 
+- O próximo passo é selecionar e criar um grupo de segurança, conforme proposto no projeto. Esse grupo de segurança tem a função de controlar o tráfego de rede permitido para a instância, definindo quais portas podem ser acessadas e por quais fontes, garantindo assim a segurança da comunicação.
+
+ ![Image](https://github.com/user-attachments/assets/c7ccbffc-6319-4710-8dee-bda6b437f329)  
+
+- Como proposto, manteremos os serviços **SSH** e **HTTP** ativos. Para isso, selecionaremos as opções que permitem o tráfego **SSH** e **HTTP**. O tráfego **SSH** é necessário para realizar a conexão segura e remota com a instância, enquanto o tráfego **HTTP** é essencial para permitir o acesso à aplicação ou site hospedado no servidor. Essas permissões garantem a funcionalidade dos serviços de administração e comunicação da instância.
+
+  ![Image](https://github.com/user-attachments/assets/04ebb4ca-4dff-4862-b463-3540c733210e)
+
+  ![Image](https://github.com/user-attachments/assets/2b79e9c9-ce43-4cd0-98df-e1972079147e)
+
+- Após essa etapa, será necessário definir o armazenamento a ser alocado para a instância.
+
+   ![Image](https://github.com/user-attachments/assets/4c4bc17b-c494-4097-a1b1-b306b2f84c39)
+
+- Após essa etapa, basta selecionar o botão **Executar instância** para que ela seja criada.
+
+   ![Image](https://github.com/user-attachments/assets/3d14955f-1437-44c4-830b-dc39efbcc92e)
+
+- A imagem abaixo demonstra que a instância foi criada com sucesso. Ao selecionar o botão **Selecionar instância**, seremos redirecionados para a página de visualização da instância.
+
+   ![Image](https://github.com/user-attachments/assets/59ab61c4-a230-4fef-811b-d98d2cfb95c9)
+   ![Image](https://github.com/user-attachments/assets/709af886-7c5a-42a7-9797-0e85e8ab5698)
+
+- Neste processo da 3.1. e 3.2., criamos uma VPC na AWS, configurando sub-redes públicas e privadas conforme as necessidades do projeto. Em seguida, acessamos o painel EC2, onde configuramos e lançamos uma instância, definindo seu nome, sistema operacional (Ubuntu), grupo de segurança e armazenamento. Também habilitamos os serviços SSH e HTTP para garantir a conectividade e o acesso adequado. Por fim, executamos a instância e verificamos sua criação com sucesso. Esse procedimento garante uma infraestrutura básica e segura para hospedar aplicações e serviços na AWS.
+ 
 ## 3.3. Instalar o servidor Nginx no Ubuntu:
 - No terminal Ubuntu, digite:
 powershell
