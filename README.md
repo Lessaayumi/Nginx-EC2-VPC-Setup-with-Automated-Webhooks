@@ -20,21 +20,19 @@ Este repositório contém a implementação de uma infraestrutura em nuvem basea
    
    3.4. [Instalação do Nginx](#Instalação=do-Nginx)
    
-   3.5. [Teste de funcionamento do Nginx](#Teste-de-funcionamento-do-Nginx)
+   3.5. [Criação do Webhook utilizando Discord](#Criação-do-Webhook-utilizando-Discord)
    
-   3.6. [Criação do Webhook utilizando Discord](#Criação-do-Webhook-utilizando-Discord)
+   3.6. [Criando um servidor no Discord](#Criando-um-servidor-no-Discord)
    
-   3.7. [Criando um servidor no Discord](#Criando-um-servidor-no-Discord)
+   3.7. [Criando um script de automação de logs utilizando Python](#Criando-um-script-de-automação-de-logs-utilizando-Python)
    
-   3.8. [Criando um script de automação de logs utilizando Python](#Criando-um-script-de-automação-de-logs-utilizando-Python)
+   3.8. [Automatizando Script utilizando o crontab](#Automatizando-Script-utilizando-o-crontab)
    
-   3.9. [Automatizando Script utilizando o crontab](#Automatizando-Script-utilizando-o-crontab)
+   3.9. [Teste de funcionalidade do WebHook](#Teste-de-funcionalidade-do-WebHook)
    
-   3.10. [Teste de funcionalidade do WebHook](#Teste-de-funcionalidade-do-WebHook)
-   
-   3.11. [Criando uma Página em Html](#Criando-uma-Página-em-Html)
+   3.10. [Criando uma Página em Html](#Criando-uma-Página-em-Html)
 
-   3.12 [Subindo script Html ](#Subindo-script-Html)
+   3.11. [Subindo script Html ](#Subindo-script-Html)
       
 5. [Testes finais](#Testes-finais)  
    4.1. [Logs quando o sistema está online](#logs-quando-o-sistema-está-online)  
