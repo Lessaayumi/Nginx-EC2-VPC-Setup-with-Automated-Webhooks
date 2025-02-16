@@ -582,10 +582,3 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 
 
-        MENSAGEM="O serviço $SERVICO está OFFLINE"
-        LOG="$DATA_HORA | Serviço: $SERVICO | STATUS: $ESTADO | Mensagem: $MENSAGEM"
-        #Escreve log no arquivo servico_offline.log
-        echo "$LOG" >> "$LOG_OFFLINE"
-        echo -e "\033[0;31m Offline \033[0m"
-fi
-
