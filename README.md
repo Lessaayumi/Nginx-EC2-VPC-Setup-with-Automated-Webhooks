@@ -269,7 +269,53 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
  
         sudo apt-get install python3
 
+- Será necessário desenvolver um script que receba informações sobre o endereço IP, armazene esses dados e, caso um serviço esteja inativo, tome as ações apropriadas, como enviar uma notificação. Com o comando `vim` ou `nano`criamos nosso arquivo que irá armazenar nosso script.
 
+      vim monitoramento.py
+
+- Foi criado o seguinte Script
+
+      import requests
+
+      #tenho a url do servidor que criei
+
+      WEBHOOK_URL= "https://discordapp.com/api/webhooks/1339647118004191348/cTE7JOOgK1qc51TYIsvohT50arXOhSShIr43x1xlwNrJJiRUjrpXdvh-YGCdEk2Yymzj"
+
+      # Vou ter um alerta caso o nginx não estaja funcionando
+
+      def send_alert(message):
+      requests.post(WEBHOOK_URL, json={"content": message})
+
+      def check_site(url):
+      try:
+        response = requests.get(url, timeout=5)
+        if response.status_code == 200:
+            print("Site is alive!")
+        else:                                                                           send_alert(f"⚠ Site {url} returned status code: {response.status_code}")
+      except:
+        send_alert(f"❌ Site {url} is down!")
+
+      #ip publico que o nginx está rodando                                                                                                                    check_site('http://3.89.92.220:80')
+
+
+- Esse script em Python atende bem às necessidades do projeto. Ele faz a verificação do status do serviço Nginx e, caso o serviço esteja fora do ar, envia um alerta para o Discord, conforme o objetivo do projeto.
+
+
+## 3.7. Automatizando Script utilizando o crontab
+
+- O crontab é uma ferramenta do Ubuntu que permite agendar e automatizar a execução de tarefas em intervalos de tempo específicos. Ela é usada para configurar jobs (tarefas) que podem ser executados de forma recorrente, como diariamente, semanalmente ou em horários pré-determinados. Aqui, utilizaremos o **crontab**, pois o projeto propõe que haja uma verificação no Nginx a cada um minuto, para isso no terminal teremos que digiatar o seguinte comando
+
+        contrab -e
+ 
+ - O serviço nos fornecerá um arquivo para edição, no qual devemos inserir os cinco asteriscos (** * **), uma vez que, no **crontab**, o asterisco representa uma execução em todos os intervalos possíveis (minuto, hora, dia, mês, e dia da semana). Após isso, devemos indicar o comando para executar o Python e, em seguida, especificar o caminho completo onde o nosso script se encontra.
+
+   
+
+
+
+
+
+  
     
 
   
