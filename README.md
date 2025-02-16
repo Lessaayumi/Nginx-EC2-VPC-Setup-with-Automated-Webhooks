@@ -20,19 +20,21 @@ Este repositório contém a implementação de uma infraestrutura em nuvem basea
    
    3.4. [Instalação do Nginx](#Instalação=do-Nginx)
    
-      3.4.1. [Teste de funcionamento do Nginx](#Teste-de-funcionamento-do-Nginx)
+   3.5. [Teste de funcionamento do Nginx](#Teste-de-funcionamento-do-Nginx)
    
-   3.5. [Criação do Webhook utilizando Discord](#Criação-do-Webhook-utilizando-Discord)
+   3.6. [Criação do Webhook utilizando Discord](#Criação-do-Webhook-utilizando-Discord)
    
-      3.5.1 [Criando um servidor no Discord](#Criando-um-servidor-no-Discord)
+   3.7. [Criando um servidor no Discord](#Criando-um-servidor-no-Discord)
    
-      3.5.2 [Criando um script de automação de logs: Utilizando Python](#Criando-um-script-de-automação-de-logs:-Utilizando-Python)
+   3.8. [Criando um script de automação de logs utilizando Python](#Criando-um-script-de-automação-de-logs-utilizando-Python)
    
-      3.5.3 [Automatizando Script utilizando o crontab](#Automatizando-Script-utilizando-o-crontab)
+   3.9. [Automatizando Script utilizando o crontab](#Automatizando-Script-utilizando-o-crontab)
    
-      3.5.4 [Teste de funcionalidade do WebHook](#Teste-de-funcionalidade-do-WebHook)
+   3.10. [Teste de funcionalidade do WebHook](#Teste-de-funcionalidade-do-WebHook)
    
-   3.6. [Criando uma Página em Html](#Criando-uma-Página-em-Html)    
+   3.11. [Criando uma Página em Html](#Criando-uma-Página-em-Html)
+
+   3.12 [Subindo script Html ](#Subindo-script-Html)
       
 5. [Testes finais](#Testes-finais)  
    4.1. [Logs quando o sistema está online](#logs-quando-o-sistema-está-online)  
@@ -180,29 +182,66 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
     ![Image](https://github.com/user-attachments/assets/cad28718-8ee7-488e-acbf-0b3156f4245f)
 
+- 
+
+
+## 3.4. Instalação do Nginx
+
+- Para facilitar nossas configurações, o primeiro comando que vamos executar para prosseguir será o: `sudo -i `
+
+   ![Image](https://github.com/user-attachments/assets/fdad9658-08d4-44d2-92a6-39ae743a37b6)
+
+- Logo, perceberemos que entramos como usuário root. Sendo usuário root, vamos simplificar alguns processos.
+
+  ![Image](https://github.com/user-attachments/assets/cf3997c5-71b2-4b86-ba4c-fb9a6ee80a41)
+
+- Antes de iniciar a instalação do Nginx, vamos executar o comando `apt install update`. Esse comando é utilizado para atualizar a lista de pacotes disponíveis nos repositórios configurados no sistema. Ele não instala ou atualiza pacotes diretamente, mas garante que as informações sobre as versões mais recentes dos pacotes estejam atualizadas, o que é essencial para garantir que a instalação do Nginx ou de qualquer outro pacote seja feita a partir da versão mais recente disponível.
+
+  ![Image](https://github.com/user-attachments/assets/8a72a036-eef3-490e-a50a-30c2587be9c8)
+
+- Logo após, com o comando apt install nginx, iniciaremos a instalação do Nginx. Esse comando irá baixar e instalar o pacote Nginx em sua versão mais recente, conforme a lista de pacotes atualizada previamente.
+
+  ![Image](https://github.com/user-attachments/assets/1f21f694-4e1a-485a-8b89-e9266f1015dc)
+
+- Com o comando nginx -v, podemos verificar qual versão do Nginx está instalada no sistema. Isso é essencial para futuras configurações, pois, dependendo da versão, alguns recursos ou comandos podem variar.
+
+  ![Image](https://github.com/user-attachments/assets/4d059079-c4cc-41f7-a172-f95548771dcf)
+  
+  ![Image](https://github.com/user-attachments/assets/d3b14b96-44df-4818-bc53-7714a3bc1df9)
+
+- Agora, na página de detalhes da instância na AWS, você encontrará o IP público da sua instância. Vamos copiar esse IP e rodá-lo no nosso navegador. Se o Nginx estiver corretamente instalado e funcionando, você verá a página padrão do Nginx, indicando que o servidor web está rodando corretamente. Caso contrário, pode ser necessário verificar a configuração ou o status do serviço.
+
+   ![Image](https://github.com/user-attachments/assets/54bed0dc-59a3-4488-8b84-cad40d50bda0)
+
+   ![Image](https://github.com/user-attachments/assets/b8d4b113-7df5-47e7-8a52-dbb1f28b1a17)
+
+  ![Image](https://github.com/user-attachments/assets/1518ba7d-cef9-48f2-982d-52fac7c143c4)
+
+- Percebemos que o nosso Nginx está rodando corretamente, pois ao acessarmos o IP fornecido no navegador, ele corresponde à página padrão do Nginx. Agora, para realizar um teste, vamos executar o comando systemctl stop nginx. Esse comando vai parar o funcionamento do serviço Nginx.
+
+  ![Image](https://github.com/user-attachments/assets/4cc9930d-d941-42a1-aaf6-9d249db8165a)
+
+- Vamos atualizar a página do navegador para verificar se o serviço realmente foi parado. Quando o Nginx estiver parado, o navegador não exibirá mais a página padrão do Nginx e, em vez disso, poderá mostrar um erro, como "Erro 502" ou "Não foi possível conectar ao servidor". Isso confirma que o serviço foi interrompido com sucesso.
+
+  ![Image](https://github.com/user-attachments/assets/34af50c5-230d-49b8-827f-41ebb4722a71)
+
+
+
+
+  
+
+  
+  
+
+  
+
   
 
 
-  
-
- 
 
 
 
-  
 
-
-  
-
-
-  
- 
-## 3.56. Instalar o servidor Nginx no Ubuntu:
-- No terminal Ubuntu, digite:
-powershell
-sudo apt install nginx
-
-- Após a instalação, para verificar se o Nginx está funcionando, digite:
 powershell
 sudo systemctl status nginx
 
