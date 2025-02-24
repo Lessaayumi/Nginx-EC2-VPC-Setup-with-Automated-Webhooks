@@ -537,11 +537,11 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 ## 6. Referências
 
-- Amazon CloudWatch: O Amazon CloudWatch é um serviço de monitoramento que permite coletar e acompanhar métricas, logs e eventos, oferecendo insights sobre o desempenho e a integridade dos recursos e aplicações na AWS.
-
-- Ferramentas de Monitoramento da AWS: A AWS oferece diversas ferramentas para monitoramento e governança, permitindo a observação e o gerenciamento eficaz de recursos e aplicações na nuvem.
-
-- https://support.discord.com/hc/pt-br/articles/228383668-Usando-Webhooks
+- support.discord.com/hc/pt-br/articles/228383668-Usando-Webhooks - Acesso: 17 de fevereiro de 2025, ás 14h26.
+- docs.aws.amazon.com/pt_br/vpc/latest/userguide/create-vpc.html#:~:text=Para%20criar%20uma%20VPC%2C%20sub,more%20(VPC%20e%20mais) Acesso: 15 de fevereiro de 2025, ás 19h51.
+- docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/EC2_GetStarted.html - Acesso: 17 de Fevereiro de 2025, ás 20h22.
+- digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04-pt - Acesso: 17 de Fevereiro de 2025, ás 20h43.
+  
 
 
 
