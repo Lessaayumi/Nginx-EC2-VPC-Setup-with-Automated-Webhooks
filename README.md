@@ -3,7 +3,7 @@ Este repositório contém a implementação de uma infraestrutura em nuvem basea
 
 ## Índice
 
-1. [Resumo](#Resumo)  
+1. [Resumo e tecnologias](#Resumo)  
 
 2. [Objetivos](#objetivos)  
    - [Capacitação em Computação em Nuvem](#Capacitação-em-Computação-em-Nuvem)  
@@ -40,7 +40,7 @@ Este repositório contém a implementação de uma infraestrutura em nuvem basea
 
 8.  [Referências](#Referências)
 
-## 1. Resumo:
+# 1. Resumo e tecnologias:
 A atividade foi desenvolvida com base no Programa de Bolsas (PB) da Compass UOL, dentro da trilha de estudos em AWS e DevSecOps. O objetivo principal é capacitar os participantes na criação e configuração de uma infraestrutura na nuvem, seguindo boas práticas de segurança e automação.  
 
 No escopo da atividade, o participante deve provisionar uma Virtual Private Cloud (VPC) e uma instância EC2 utilizando o sistema operacional Ubuntu. Em seguida, deve estabelecer conexão remota via SSH, instalar e configurar o servidor web Nginx e desenvolver uma página web em HTML.  
