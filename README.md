@@ -127,13 +127,11 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
  
 - O próximo passo é selecionar e criar um grupo de segurança, conforme proposto no projeto. Esse grupo de segurança tem a função de controlar o tráfego de rede permitido para a instância, definindo quais portas podem ser acessadas e por quais fontes, garantindo assim a segurança da comunicação.
 
- ![Image](https://github.com/user-attachments/assets/c7ccbffc-6319-4710-8dee-bda6b437f329)  
+    ![Image](https://github.com/user-attachments/assets/cadec82d-b8e6-464a-b6c9-0f5f96a010a6)
 
 - Como proposto, manteremos os serviços **SSH** e **HTTP** ativos. Para isso, selecionaremos as opções que permitem o tráfego **SSH** e **HTTP**. O tráfego **SSH** é necessário para realizar a conexão segura e remota com a instância, enquanto o tráfego **HTTP** é essencial para permitir o acesso à aplicação ou site hospedado no servidor. Essas permissões garantem a funcionalidade dos serviços de administração e comunicação da instância.
 
-  ![Image](https://github.com/user-attachments/assets/04ebb4ca-4dff-4862-b463-3540c733210e)
-
-  ![Image](https://github.com/user-attachments/assets/2b79e9c9-ce43-4cd0-98df-e1972079147e)
+   ![Image](https://github.com/user-attachments/assets/96001a75-9fc6-451b-bea6-27819a5fb798)
 
 - Após essa etapa, será necessário definir o armazenamento a ser alocado para a instância.
 
