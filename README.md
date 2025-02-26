@@ -41,7 +41,7 @@ Este repositório contém a implementação de uma infraestrutura em nuvem basea
 8.  [Referências](#Referências)
 
 # 1. Resumo e tecnologias:
-A atividade foi desenvolvida com base no Programa de Bolsas (PB) da Compass UOL, dentro da trilha de estudos em AWS e DevSecOps. O objetivo principal é capacitar os participantes na criação e configuração de uma infraestrutura na nuvem, seguindo boas práticas de segurança e automação.  
+A atividade foi desenvolvida com base no Programa de Bolsas (PB) da Compass UOL, dentro da trilha de estudos em AWS e DevSecOps. O objetivo principal é capacitar os bolsistas na criação e configuração de uma infraestrutura na nuvem, seguindo boas práticas de segurança e automação.  
 
 No escopo da atividade, o participante deve provisionar uma Virtual Private Cloud (VPC) e uma instância EC2 utilizando o sistema operacional Ubuntu. Em seguida, deve estabelecer conexão remota via SSH, instalar e configurar o servidor web Nginx e desenvolver uma página web em HTML.  
 
@@ -54,7 +54,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 - _Automação e Segurança_: Implementar boas práticas de acesso remoto via SSH, garantindo a correta configuração e segurança da instância.
     
-- _Monitoramento Contínuo_: Desenvolver um script em Python para verificar a disponibilidade do site e integrar com o Discord Webhook para alertas automáticos em caso de falhas
+- _Monitoramento Contínuo_: Desenvolver um script em Python ou bash para verificar a disponibilidade do site e integrar com o Discord Webhook para alertas automáticos em caso de falhas
 
 ## 3. Passo a Passo
 
@@ -63,9 +63,6 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
   
   ![Image](https://github.com/user-attachments/assets/dd4300a1-c127-434c-bc75-e110914a3e64)
   
-- Para criar uma VPC na AWS, é necessário acessar a página inicial do console da AWS e localizar a opção **VPC** no menu de navegação.
-  
-  ![Image](https://github.com/user-attachments/assets/3158d1a8-46c0-4cf6-84ce-3af678ae4b12)
   
 - Após essa etapa, o sistema redirecionará para a página de criação da VPC. Como nosso objetivo é configurar uma VPC com duas sub-redes públicas e duas privadas, selecionaremos a opção **Criar VPC e mais** para prosseguir com a configuração.
   
@@ -89,19 +86,13 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
    ![Image](https://github.com/user-attachments/assets/642fa485-d415-47cd-a1bd-3a16bdcd32f6)
 
-- Após a verificação, para concluir a criação da VPC, basta selecionar o botão **"Criar VPC"**.
-
-  ![Image](https://github.com/user-attachments/assets/69acf7eb-d002-4b0c-9f76-6da722ca0348)
-
-- Após essa etapa, nossa VPC estará criada, concluindo assim o processo de sua configuração.
+- Após a verificação, para concluir a criação da VPC, basta selecionar o botão **"Criar VPC"**. Logo a essa etapa, nossa VPC estará criada, concluindo assim o processo de sua configuração e criação.
 
    ![Image](https://github.com/user-attachments/assets/e40aec9a-bb55-40c3-8514-dba876888563)
 
 ## 3.2. Criação de uma instância EC2, utilizando o sistema operacional Ubuntu:
 
 -  Na página inicial da AWS, é necessário localizar a opção **EC2**. Caso não esteja visível no menu principal, podemos utilizar a barra de pesquisa **"Search"** para digitar **EC2**, facilitando sua localização.
-
-  ![Image](https://github.com/user-attachments/assets/78973ca7-a8c2-460a-a23d-2045640a8ae3)
 
 - Ao selecionar a opção **EC2**, seremos direcionados ao painel correspondente. Nesse painel, deve-se localizar a opção **Executar instância**, para iniciar o processo de criação da instância.
 
@@ -111,17 +102,17 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
   ![Image](https://github.com/user-attachments/assets/92203e9b-5af5-4155-a10a-98b3a7354b13)
 
-- Em seguida, selecionaremos o servidor **Ubuntu**, que foi o escolhido para a criação da instância.
+- Em seguida, selecionaremos o servidor **Ubuntu**, que foi o escolhido e proposto no projeto.
 
   ![Image](https://github.com/user-attachments/assets/cae85007-8e06-46b1-aad8-8a24c0bbe6bc)
 
-- Confira nas imagens as configurações necessárias para o correto funcionamento do sistema, a fim de evitar problemas futuros com os serviços.
+- Nas imagens contém as configurações necessárias para o correto funcionamento do sistema, a fim de evitar problemas futuros com os serviços.
 
  ![Image](https://github.com/user-attachments/assets/cae85007-8e06-46b1-aad8-8a24c0bbe6bc)
   
  ![Image](https://github.com/user-attachments/assets/e1917323-2991-4146-a771-ae4efabed38a)
 
-- Agora, será necessário selecionar o par de chaves para realizar a conexão via SSH.
+- Agora, será necessário selecionar o par de chaves para realizar a conexão via SSH, caso não tenha criado, ao lado encontramos a opção criar novo par de chaves.
 
 ![Image](https://github.com/user-attachments/assets/a098884b-ee8c-4b94-87c2-e19548064900)
  
@@ -133,18 +124,15 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
    ![Image](https://github.com/user-attachments/assets/96001a75-9fc6-451b-bea6-27819a5fb798)
 
-- Após essa etapa, será necessário definir o armazenamento a ser alocado para a instância.
+- Após essa etapa, será necessário definir o armazenamento a ser alocado para a instância, no caso deixaremos o padrão da AWS.
 
-   ![Image](https://github.com/user-attachments/assets/4c4bc17b-c494-4097-a1b1-b306b2f84c39)
-
-- Após essa etapa, basta selecionar o botão **Executar instância** para que ela seja criada.
+- Para finalizar a criação da instância basta selecionar o botão **Executar instância**.
 
    ![Image](https://github.com/user-attachments/assets/3d14955f-1437-44c4-830b-dc39efbcc92e)
 
 - A imagem abaixo demonstra que a instância foi criada com sucesso. Ao selecionar o botão **Selecionar instância**, seremos redirecionados para a página de visualização da instância.
 
    ![Image](https://github.com/user-attachments/assets/59ab61c4-a230-4fef-811b-d98d2cfb95c9)
-   ![Image](https://github.com/user-attachments/assets/709af886-7c5a-42a7-9797-0e85e8ab5698)
 
 - Neste processo da 3.1. e 3.2., criamos uma VPC na AWS, configurando sub-redes públicas e privadas conforme as necessidades do projeto. Em seguida, acessamos o painel EC2, onde configuramos e lançamos uma instância, definindo seu nome, sistema operacional (Ubuntu), grupo de segurança e armazenamento. Também habilitamos os serviços SSH e HTTP para garantir a conectividade e o acesso adequado. Por fim, executamos a instância e verificamos sua criação com sucesso. Esse procedimento garante uma infraestrutura básica e segura para hospedar aplicações e serviços na AWS.
 
@@ -176,30 +164,23 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
     ![Image](https://github.com/user-attachments/assets/cad28718-8ee7-488e-acbf-0b3156f4245f)
 
-- 
-
+- Nessa etapa, realizamos a conexão via SSH completamente.
 
 ## 3.4. Instalação do Nginx
 
 - Para facilitar nossas configurações, o primeiro comando que vamos executar para prosseguir será o: `sudo -i `
-
-   ![Image](https://github.com/user-attachments/assets/fdad9658-08d4-44d2-92a6-39ae743a37b6)
-
+  
 - Logo, perceberemos que entramos como usuário root. Sendo usuário root, vamos simplificar alguns processos.
 
   ![Image](https://github.com/user-attachments/assets/cf3997c5-71b2-4b86-ba4c-fb9a6ee80a41)
 
 - Antes de iniciar a instalação do Nginx, vamos executar o comando `apt install update`. Esse comando é utilizado para atualizar a lista de pacotes disponíveis nos repositórios configurados no sistema. Ele não instala ou atualiza pacotes diretamente, mas garante que as informações sobre as versões mais recentes dos pacotes estejam atualizadas, o que é essencial para garantir que a instalação do Nginx ou de qualquer outro pacote seja feita a partir da versão mais recente disponível.
 
-  ![Image](https://github.com/user-attachments/assets/8a72a036-eef3-490e-a50a-30c2587be9c8)
-
-- Logo após, com o comando apt install nginx, iniciaremos a instalação do Nginx. Esse comando irá baixar e instalar o pacote Nginx em sua versão mais recente, conforme a lista de pacotes atualizada previamente.
+- Logo após, com o comando `apt install nginx`, iniciaremos a instalação do Nginx. Esse comando irá baixar e instalar o pacote Nginx em sua versão mais recente, conforme a lista de pacotes atualizada previamente.
 
   ![Image](https://github.com/user-attachments/assets/1f21f694-4e1a-485a-8b89-e9266f1015dc)
 
-- Com o comando nginx -v, podemos verificar qual versão do Nginx está instalada no sistema. Isso é essencial para futuras configurações, pois, dependendo da versão, alguns recursos ou comandos podem variar.
-
-  ![Image](https://github.com/user-attachments/assets/4d059079-c4cc-41f7-a172-f95548771dcf)
+- Com o comando `nginx -v`, podemos verificar qual versão do Nginx está instalada no sistema. Isso é essencial para futuras configurações, pois, dependendo da versão, alguns recursos ou comandos podem variar.
   
   ![Image](https://github.com/user-attachments/assets/d3b14b96-44df-4818-bc53-7714a3bc1df9)
 
@@ -211,7 +192,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
   ![Image](https://github.com/user-attachments/assets/1518ba7d-cef9-48f2-982d-52fac7c143c4)
 
-- Percebemos que o nosso Nginx está rodando corretamente, pois ao acessarmos o IP fornecido no navegador, ele corresponde à página padrão do Nginx. Agora, para realizar um teste, vamos executar o comando systemctl stop nginx. Esse comando vai parar o funcionamento do serviço Nginx.
+- Percebemos que o nosso Nginx está rodando corretamente, pois ao acessarmos o IP fornecido no navegador, ele corresponde à página padrão do Nginx. Agora, para realizar um teste, vamos executar o comando `systemctl stop nginx`. Esse comando vai parar o funcionamento do serviço Nginx.
 
   ![Image](https://github.com/user-attachments/assets/4cc9930d-d941-42a1-aaf6-9d249db8165a)
 
@@ -223,9 +204,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
   ## 3.5. Criação do Webhook utilizando Discord
 
-  - Neste estágio do projeto, será necessário criar um servidor webhook no Discord. Este servidor deverá ser notificado a cada minuto, caso o site Nginx esteja fora do ar. O primeiro passo para isso é acessar o Discord e, em seguida, deve-se selecionar a opção de criação, conforme ilustrado na imagem abaixo.
- 
-     ![Image](https://github.com/user-attachments/assets/95f72cee-d295-43de-9a2f-4d92e3746105)
+  - Neste estágio do projeto, será necessário criar um servidor webhook no Discord. Este servidor deverá ser notificado a cada minuto, caso o site Nginx esteja fora do ar. O primeiro passo para isso é acessar o Discord e, em seguida, deve-se selecionar a opção de criação.
 
   - Após isso, selecione a opção "Criar o meu", e em seguida a opção "Para meus amigos e eu"
  
@@ -301,7 +280,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 ## 3.7. Automatizando Script utilizando o crontab
 
-- O crontab é uma ferramenta do Ubuntu que permite agendar e automatizar a execução de tarefas em intervalos de tempo específicos. Ela é usada para configurar jobs (tarefas) que podem ser executados de forma recorrente, como diariamente, semanalmente ou em horários pré-determinados. Aqui, utilizaremos o **crontab**, pois o projeto propõe que haja uma verificação no Nginx a cada um minuto, para isso no terminal teremos que digiatar o seguinte comando
+- O crontab é uma ferramenta do Ubuntu que permite agendar e automatizar a execução de tarefas em intervalos de tempo específicos. Ela é usada para configurar jobs (tarefas) que podem ser executados de forma recorrente, como diariamente, semanalmente ou em horários pré-determinados. Aqui, utilizaremos o **crontab**, pois o projeto propõe que haja uma verificação no Nginx a cada um minuto, para isso no terminal teremos que digitar o seguinte comando:
 
         contrab -e
  
@@ -465,15 +444,15 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
       nano /etc/nginx/sites-available/meusite
 
-  - Nesse arquivo vamos por as infromações contidas na imagem abaixo:
+  - Nesse arquivo vamos por as infromações contidas na imagem abaixo, elas são importantes pois é primordial para a hospedagem da página.
  
   ![Image](https://github.com/user-attachments/assets/8c9c858b-dfe9-4aef-8cd5-679fdb9d8fe8)
 
-  - Logo, iremos criar uma pasta para armazenar
+  - Logo, iremos criar uma pasta para armazenar o conteúdo a ser transmitido.
  
     ![Image](https://github.com/user-attachments/assets/dcafaed3-ac09-496c-827d-c659c79fe5aa)
 
-  - Em seguida iremos criar um arquivo dentro dessa pasta para armazenar o script do nosso site
+  - Em seguida iremos criar um arquivo dentro dessa pasta para armazenar o script do site.
  
         nano /var/www/meusite/index.html
 
@@ -481,7 +460,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
  
     ![Image](https://github.com/user-attachments/assets/49910362-de40-4ef6-9921-45cc6de1c6fe)
 
-- Após fazer o script, os seguintes comandos devem ser realizados.
+- Após fazer o script, os seguintes comandos devem ser realizados para configurar o nginx e subir/hospedar a página no IP.
 
   ![Image](https://github.com/user-attachments/assets/08e5df6d-21f2-45fb-a501-8f2c6aba216e)
 
@@ -499,7 +478,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
 - Agora, nesta seção, realizaremos dois testes: o primeiro para verificar o funcionamento do site e o segundo para testar o recebimento de mensagens no Discord quando o serviço do Nginx não estiver respondendo.
 
-  ## 4.1.  Logs quando o sistema está online
+  ## 4.1.  Alertas quando o sistema está online
 
   - Reiniciamos o sistema e o Nginx começa a funcionar automaticamente assim que a instância é iniciada.
 
@@ -515,7 +494,7 @@ Além disso, foi implementado um mecanismo de monitoramento automatizado utiliza
 
   ![Image](https://github.com/user-attachments/assets/7ca1b4c5-31af-451e-b4c5-1d67ebfee51f)
 
-   ## 4.2. Logs quando o sistema está offline
+   ## 4.2. Alertas quando o sistema está offline
 
   - Agora, vamos pausar o serviço e verificar o recebimento das mensagens no Discord.
  
